@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal reset */
+html, body, #root { height: 100%; }
+body { margin: 0; }
+
+/* Text reveal: stroke trace then fill fade */
+.reveal-text {
+  position: relative;
+  color: transparent;
+  will-change: opacity, clip-path;
+}
+.reveal-text::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: currentColor;
+  opacity: 0;
+  transition: opacity .5s ease .35s;
+}
+.reveal-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: currentColor;
+  clip-path: inset(0 100% 0 0);
+}
+.reveal-text.is-visible::after { animation: trace 0.6s ease forwards; }
+.reveal-text.is-visible::before { opacity: 1; }
+
+@keyframes trace { to { clip-path: inset(0 0 0 0); } }
+
+/* Adjust stroke thickness */
+.reveal-text[data-type="heading"]::after { -webkit-text-stroke-width: 1.2px; }
+.reveal-text[data-type="body"]::after { -webkit-text-stroke-width: 0.6px; }
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-text { color: inherit; }
+  .reveal-text::before, .reveal-text::after { content: none; }
+}
