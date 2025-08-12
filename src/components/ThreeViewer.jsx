@@ -3,11 +3,19 @@ import { useGLTF, OrbitControls, Environment, ContactShadows } from '@react-thre
 import { useRef, Suspense } from 'react'
 import { useFrame } from '@react-three/fiber'
 
+// Resolve asset URLs to respect Vite base path (e.g., /mschf/ on GitHub Pages)
+function resolveAssetUrl(input) {
+  if (!input) return `${import.meta.env.BASE_URL}nonexistent.glb`
+  if (/^https?:\/\//i.test(input) || input.startsWith('data:')) return input
+  const trimmed = input.replace(/^\//, '')
+  return `${import.meta.env.BASE_URL}${trimmed}`
+}
+
 function Model({ url, ...props }) {
   const ref = useRef()
   
-  // Always call useGLTF, but with a fallback URL that won't load
-  const validUrl = url && url !== "" ? url : "/nonexistent.glb"
+  // Normalize URL against Vite base so absolute paths don't break on Pages
+  const validUrl = resolveAssetUrl(url)
   const { scene, error } = useGLTF(validUrl, true)
   
   // Slow rotation - always call useFrame
@@ -93,7 +101,7 @@ function Scene({ modelUrl }) {
 }
 
 export default function ThreeViewer({ 
-  modelUrl = "/models/model.glb", 
+  modelUrl = "models/model.glb", 
   height = "100vh",
   className = ""
 }) {

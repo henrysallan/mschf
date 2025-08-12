@@ -315,7 +315,7 @@ export default function CaseStudy() {
       {/* Three.js Intro Viewer */}
       <section className="w-full">
         <ThreeViewer 
-          modelUrl="/models/Mschf.glb"
+          modelUrl="models/Mschf.glb"
           height="100vh"
           className="w-full"
         />
