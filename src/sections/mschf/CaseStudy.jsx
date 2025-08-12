@@ -1,5 +1,6 @@
 import Placeholder from '../../components/Placeholder'
 import ThreeViewer from '../../components/ThreeViewer'
+import VideoPlayer from '../../components/VideoPlayer'
 import { motion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import opentype from 'opentype.js'
@@ -330,15 +331,34 @@ export default function CaseStudy() {
             <TraceText text="The original ask was modest: repurpose existing photography into simple animations for social media. Over the course of a year, that brief evolved into a high-quality, 3D-driven content series that increased engagement, supported seasonal campaigns, and created a consistent visual identity for the brand." />
           </div>
           <div className="order-1 md:order-2">
-            <Placeholder label="9:16 Hero Video" aspect="9 / 16" className="w-full" />
+            <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+              <VideoPlayer
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2e803d38867046f62cbf8f31e1c30b06/manifest/video.m3u8"
+              />
+            </div>
           </div>
         </section>
 
         {/* Section 2 — The Brief */}
         <section className="min-h-screen grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
-            <div className="bg-zinc-200 h-64" />
-            <div className="bg-zinc-200 h-32" />
+            <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+              <img
+                alt="Product"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover bg-zinc-100"
+                src="https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/a6a725f5-7ce1-4e4d-5b2d-03e9c3c1ab00/public"
+              />
+            </div>
+            <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+              <img
+                alt="Brand Guidelines"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover bg-zinc-100"
+                src="https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/a6a725f5-7ce1-4e4d-5b2d-03e9c3c1ab00/public"
+              />
+            </div>
           </div>
           <div className="space-y-4">
             <SvgTraceHeading text="The Brief" />
@@ -347,30 +367,45 @@ export default function CaseStudy() {
           </div>
         </section>
 
-        {/* Section 3 — Establishing the Baseline */}
+        {/* Section 3 — Establishing the Baseline (4-up) */}
         <section className="min-h-screen grid gap-6 content-center">
-          <div className="grid md:grid-cols-2 gap-6">
-            <Placeholder label="Reference Animation (9:16)" aspect="9 / 16" className="w-full" />
-            <Placeholder label="Clean 2D Animation (9:16)" aspect="9 / 16" className="w-full" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            { [
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/21d1fac9b0624048cf490feab97d9aa2/manifest/video.m3u8',
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/b67e22f1709fc2fa8410f1f310c304e4/manifest/video.m3u8',
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/94fad3c97117b2614211e96b16e3795f/manifest/video.m3u8',
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2dfc512b72690f64fa79beefeb7ccec8/manifest/video.m3u8'
+            ].map((src, i) => (
+              <div key={i} className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+                <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src={src} />
+              </div>
+            ))}
           </div>
           <TraceText text="I started by delivering exactly what was requested: clean, procedural animations based on the provided references. These used After Effects stroke effects and templates I built to make the motion more consistent and scalable." className="text-sm text-zinc-500" />
           <TraceText text="This initial phase established trust with the client and ensured we had a dependable baseline for ongoing content." className="text-sm text-zinc-500" />
         </section>
 
-        {/* Section 4 — Hypothesis & 3D Prototype */}
+        {/* Section 4 — Hypothesis & 3D Prototype (2-up) */}
         <section className="min-h-screen space-y-8 flex flex-col justify-center">
           <SvgTraceHeading text="Hypothesis & 3D Prototype" />
-          <div className="grid md:grid-cols-3 gap-4">
-            <Placeholder label="3D Physics Render (9:16)" className="w-full" />
-            <Placeholder label="3D Physics Render (9:16)" className="w-full" />
-            <Placeholder label="3D Physics Render (9:16)" className="w-full" />
+          <div className="grid md:grid-cols-2 gap-4">
+            { [
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/1650b64306991ea4b57ed987d4d94530/manifest/video.m3u8',
+              'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/68f60e87cf5b8382bd11d86472380383/manifest/video.m3u8'
+            ].map((src, i) => (
+              <div key={i} className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+                <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src={src} />
+              </div>
+            ))}
           </div>
-          <TraceText text="While delivering the baseline work, I saw an opportunity... I created a 3D prototype of the puzzle in a clean, physics-driven “blue world”." mode="words" />
+          <TraceText text="While delivering the baseline work, I saw an opportunity... I created a 3D prototype of the puzzle in a clean, physics-driven “blue world”." />
         </section>
 
         {/* Section 5 — Social Impact */}
         <section className="min-h-screen grid content-center gap-6">
-          <Placeholder label="Best Blue-world Animation (9:16)" className="w-full" />
+          <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+            <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src="https://customer-aw0tss17gwcmheqp.cloudflarestream.com/ff5afe61d7ceb4e0fe9a747a513ece48/manifest/video.m3u8" />
+          </div>
           <TraceText text="The 3D post significantly outperformed our average engagement metrics. This was the turning point." />
           <TraceText text="We pivoted strategy: 3D content would become a recurring feature of our social presence, not just a one-off experiment." />
         </section>
@@ -392,14 +427,21 @@ export default function CaseStudy() {
           </div>
         </section>
 
-        {/* Section 7 — Strategic Environment Series */}
+        {/* Section 7 — Strategic Environment Series (2 rows of 3 with labels) */}
         <section className="min-h-screen space-y-6 flex flex-col justify-center">
           <SvgTraceHeading text="Strategic Environment Series" className="font-bold text-3xl" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="relative group">
-                <Placeholder label="Environment (9:16)" className="w-full" />
-                <div className="absolute inset-0 pointer-events-none grid place-items-center text-xs text-black opacity-0 group-hover:opacity-100 transition">Name</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            { [
+              { label: 'Basketball', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f19a17949a5132ccfb8ac1728fc4753c/manifest/video.m3u8' },
+              { label: 'Gameshow', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/881ab4c19448a94314bbe6a8ace47db1/manifest/video.m3u8' },
+              { label: 'Brownstone', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2e803d38867046f62cbf8f31e1c30b06/manifest/video.m3u8' },
+              { label: 'Living Room', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/4b3111c39f82ceccf38913875c1dd3c3/manifest/video.m3u8' },
+              { label: 'Bookshelf', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f04862f24a48a757253a7a61f4c429df/manifest/video.m3u8' },
+              { label: 'Desk', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/9fa77f8b6058439e5a69d68714b92beb/manifest/video.m3u8' }
+            ].map((item, i) => (
+              <div key={i} className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+                <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src={item.src} />
+                <div className="absolute left-2 bottom-2 text-[10px] px-1.5 py-0.5 bg-white/80 text-black rounded select-none">{item.label}</div>
               </div>
             ))}
           </div>
@@ -407,84 +449,73 @@ export default function CaseStudy() {
           <TraceText text="The goal: create visual 'hooks' that mirrored our audience's world, while keeping the brand's surreal and playful energy." />
         </section>
 
-        {/* Section 8 — Alternate Concepts */}
+        {/* Section 8 — Alternate Concepts (1 video, 1 image) */}
         <section className="min-h-screen grid content-center gap-6">
-          <div className="grid md:grid-cols-3 gap-6">
-            <Placeholder label="Alt Concept (9:16)" className="w-full" />
-            <Placeholder label="Alt Concept (9:16)" className="w-full" />
-            <div className="bg-zinc-200 h-[60vh] grid place-items-center text-xs">Still Image</div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+              <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src="https://customer-aw0tss17gwcmheqp.cloudflarestream.com/3ad228825fcab830270df1424b563f12/manifest/video.m3u8" />
+            </div>
+            <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+              <img
+                alt="Alternate Concept"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover bg-zinc-100"
+                src="https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/d024d90b-9db0-4743-7950-d98a19b70600/public"
+              />
+            </div>
           </div>
           <TraceText text="Alongside the main environments, I explored alternate concepts to expand our visual language — experimenting with composition, color, and narrative framing." className="text-sm text-zinc-500" />
         </section>
 
-        {/* Section 9 — Seasonal Adaptations */}
+        {/* Section 9 — Seasonal (2 rows of 3 with labels) */}
         <section className="min-h-screen grid content-center gap-6">
-          <div className="grid md:grid-cols-3 gap-6">
-            <Placeholder label="Labor Day (9:16)" className="w-full" />
-            <Placeholder label="Columbus Day (9:16)" className="w-full" />
-            <Placeholder label="Halloween (9:16)" className="w-full" />
-          </div>
-          <TraceText text="As the library of environments grew, we began adapting them for seasonal campaigns." />
-          <TraceText text="Reusing the core 3D scenes allowed us to produce on-brand holiday content quickly without sacrificing visual quality." />
-        </section>
-
-        {/* Section 10 — Design Challenge: Readability */}
-        <section className="min-h-screen space-y-6 flex flex-col justify-center">
-          <SvgTraceHeading text="Design Challenge: Readability" className="font-bold text-3xl" />
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <div className="text-xs mb-2 text-zinc-500">Before</div>
-              <Placeholder label="Original Dynamic Style (9:16)" className="w-full" />
-            </div>
-            <div>
-              <div className="text-xs mb-2 text-zinc-500">After</div>
-              <Placeholder label="Simplified 3D Style (9:16)" className="w-full" />
-            </div>
-          </div>
-          <TraceText text="Midway through the year, a marketing consultant recommended more straightforward, readable assets to improve clarity. This created a design challenge: simplify without losing the visual polish we'd established." />
-          <TraceText text="My solution was to keep the builds in 3D, but reduce camera movement and complexity. This preserved brand quality while delivering assets that were more immediately legible." />
-        </section>
-
-        {/* Section 11 — Outcome */}
-        <section className="min-h-screen space-y-6 flex flex-col justify-center">
-          <SvgTraceHeading text="Outcome" className="font-bold text-3xl" />
-          <div className="grid md:grid-cols-3 gap-4">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <Placeholder key={i} label="Loop (9:16)" className="w-full" />
-            ))}
-          </div>
-          <TraceText text="By the end of the year, we had transformed a loose brief into a coherent, scalable content system — one that could flex across seasons, audiences, and platforms." />
-          <TraceText text="The series delivered consistent engagement, kept the brand visually distinctive, and provided a reusable toolkit for ongoing campaigns." />
-        </section>
-
-        {/* Section 12 — Learnings */}
-        <section className="min-h-screen grid content-center gap-8 bg-white">
-          <SvgTraceHeading text="Learnings" className="text-4xl font-bold" />
-          <div className="grid md:grid-cols-3 gap-12">
-            {[
-              'Start with a dependable baseline, then prototype higher-impact creative alongside it.',
-              'Use audience insights to refine tone, composition, and thematic choices.',
-              'Build modular workflows to maintain quality at scale.'
-            ].map((t, i) => (
-              <div key={i} className="space-y-4">
-                <div className="bg-zinc-200 h-16 w-16 mx-auto" />
-                <TraceText text={t} className="text-base" />
+          <SvgTraceHeading text="Seasonal Adaptations" className="font-bold text-3xl" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            { [
+              { label: 'Columbus Day', type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/07908ad414b4aed250705273bc092098/manifest/video.m3u8' },
+              { label: 'Labor Day', type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/0d318d81763b795996702fa8ce8dc2bf/manifest/video.m3u8' },
+              { label: 'Halloween 1', type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f4d02698c9782b61a39a14f7a3d952ea/manifest/video.m3u8' },
+              { label: 'Halloween 2', type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/130fed6bf46cc46280f3d23464558db5/manifest/video.m3u8' },
+              { label: 'Halloween 3', type: 'image', src: 'https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/9ccc1b30-8b52-4bff-d27c-28307132be00/public' },
+              { label: 'Halloween 4', type: 'image', src: 'https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/1d773f37-d3a7-49ec-2eee-c31bf70dea00/public' }
+            ].map((item, i) => (
+              <div key={i} className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+                {item.type === 'video' ? (
+                  <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src={item.src} />
+                ) : (
+                  <img alt={item.label} loading="lazy" className="absolute inset-0 w-full h-full object-cover bg-zinc-100" src={item.src} />
+                )}
+                <div className="absolute left-2 bottom-2 text-[10px] px-1.5 py-0.5 bg-white/80 text-black rounded select-none">{item.label}</div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Section 13 — Applying to SoundCloud */}
-        <section className="min-h-screen grid content-center gap-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-zinc-200 h-[60vh] grid place-items-center text-xs">Puzzle Still</div>
-            <div className="bg-zinc-200 h-[60vh] grid place-items-center text-xs">SoundCloud Visual</div>
-          </div>
-          <TraceText text="At SoundCloud, I see direct parallels: balancing brand voice with rapid social timelines, creating modular visual systems, and using motion to deepen audience connection." />
-          <TraceText text="The principles I applied here — from testing hypotheses to scaling creative — are the same ones I'd bring to your team." />
-        </section>
+        {/* New Section — Additional Assets (full-width + row of 4) */}
+        {/* duplicate removed */}
 
-        <div className="h-20" />
+        {/* New Section — Additional Assets (full-width + row of 4) */}
+        <section className="min-h-screen grid content-center gap-6">
+          <div className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+            <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src="https://customer-aw0tss17gwcmheqp.cloudflarestream.com/fa72111ff515f59e42279d65f5e69bc3/manifest/video.m3u8" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            { [
+              { type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/0666ebb4e733be311b4697560733bf4c/manifest/video.m3u8' },
+              { type: 'video', src: 'https://customer-aw0tss17gwcmheqp.cloudflarestream.com/fdf5031a01e52d2bf8e6e7d0471e6be7/manifest/video.m3u8' },
+              { type: 'image', src: 'https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/b35ca6e6-2be9-435d-365c-1fc83939a900/public' },
+              { type: 'image', src: 'https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/20d9a888-3d3e-4f66-6348-d15bfd63bc00/public' }
+            ].map((item, i) => (
+              <div key={i} className="relative w-full" style={{ aspectRatio: '9 / 16' }}>
+                {item.type === 'video' ? (
+                  <VideoPlayer className="absolute inset-0 w-full h-full object-cover" src={item.src} />
+                ) : (
+                  <img alt="Asset" loading="lazy" className="absolute inset-0 w-full h-full object-cover bg-zinc-100" src={item.src} />
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
       </article>
     </>
   )
