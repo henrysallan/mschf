@@ -1,0 +1,40 @@
+{
+  "S1-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2e803d38867046f62cbf8f31e1c30b06/manifest/video.m3u8", "ratio": "9/16", "fit": "cover" },
+
+  "S2-1": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/41d2b191-d8ef-49c6-f261-a5f3139f2e00/public", "ratio": "1/1", "fit": "cover" },
+  "S2-2": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/a6a725f5-7ce1-4e4d-5b2d-03e9c3c1ab00/public", "ratio": "16/9", "fit": "cover" },
+
+  "S3-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/21d1fac9b0624048cf490feab97d9aa2/manifest/video.m3u8", "ratio": "9/16" },
+  "S3-2": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/b67e22f1709fc2fa8410f1f310c304e4/manifest/video.m3u8", "ratio": "9/16" },
+  "S3-3": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/94fad3c97117b2614211e96b16e3795f/manifest/video.m3u8", "ratio": "9/16" },
+  "S3-4": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2dfc512b72690f64fa79beefeb7ccec8/manifest/video.m3u8", "ratio": "9/16" },
+
+  "S4-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/1650b64306991ea4b57ed987d4d94530/manifest/video.m3u8", "ratio": "9/16" },
+  "S4-2": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/68f60e87cf5b8382bd11d86472380383/manifest/video.m3u8", "ratio": "9/16" },
+
+  "S5-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/ff5afe61d7ceb4e0fe9a747a513ece48/manifest/video.m3u8", "ratio": "9/16" },
+
+  "S7-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f19a17949a5132ccfb8ac1728fc4753c/manifest/video.m3u8", "ratio": "9/16", "label": "Basketball" },
+  "S7-2": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/881ab4c19448a94314bbe6a8ace47db1/manifest/video.m3u8", "ratio": "9/16", "label": "Gameshow" },
+  "S7-3": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/2e803d38867046f62cbf8f31e1c30b06/manifest/video.m3u8", "ratio": "9/16", "label": "Brownstone" },
+  "S7-4": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/4b3111c39f82ceccf38913875c1dd3c3/manifest/video.m3u8", "ratio": "9/16", "label": "Living Room" },
+  "S7-5": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f04862f24a48a757253a7a61f4c429df/manifest/video.m3u8", "ratio": "9/16", "label": "Bookshelf" },
+  "S7-6": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/9fa77f8b6058439e5a69d68714b92beb/manifest/video.m3u8", "ratio": "9/16", "label": "Desk" },
+
+  "S8-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/3ad228825fcab830270df1424b563f12/manifest/video.m3u8", "ratio": "9/16" },
+  "S8-2": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/d024d90b-9db0-4743-7950-d98a19b70600/public", "ratio": "9/16", "fit": "cover" },
+
+  "S9-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/07908ad414b4aed250705273bc092098/manifest/video.m3u8", "ratio": "9/16", "label": "Columbus Day" },
+  "S9-2": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/0d318d81763b795996702fa8ce8dc2bf/manifest/video.m3u8", "ratio": "9/16", "label": "Labor Day" },
+  "S9-3": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/f4d02698c9782b61a39a14f7a3d952ea/manifest/video.m3u8", "ratio": "9/16", "label": "Halloween" },
+  "S9-4": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/130fed6bf46cc46280f3d23464558db5/manifest/video.m3u8", "ratio": "9/16", "label": "Halloween" },
+  "S9-5": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/9ccc1b30-8b52-4bff-d27c-28307132be00/public", "ratio": "9/16", "fit": "cover", "label": "Halloween" },
+  "S9-6": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/1d773f37-d3a7-49ec-2eee-c31bf70dea00/public", "ratio": "9/16", "fit": "cover", "label": "Halloween" },
+
+  "S10-1": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/fa72111ff515f59e42279d65f5e69bc3/manifest/video.m3u8", "ratio": "1/1" },
+  "S10-2": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/0666ebb4e733be311b4697560733bf4c/manifest/video.m3u8", "ratio": "9/16" },
+  "S10-3": { "type": "video", "src": "https://customer-aw0tss17gwcmheqp.cloudflarestream.com/fdf5031a01e52d2bf8e6e7d0471e6be7/manifest/video.m3u8", "ratio": "9/16" },
+
+  "S10-4": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/b35ca6e6-2be9-435d-365c-1fc83939a900/public", "ratio": "4/5", "fit": "cover" },
+  "S10-5": { "type": "image", "src": "https://imagedelivery.net/HphCwoGO3w49JUPOajXgFw/20d9a888-3d3e-4f66-6348-d15bfd63bc00/public", "ratio": "4/5", "fit": "cover" }
+}
